@@ -1,21 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Cloud</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cloud Storage</title>
+
 <style>
-body { font-family: Arial; background:#f1f3f4; }
-.file { background:white; padding:15px; margin:10px; border-radius:10px; }
-.btn { background:#1a73e8; color:white; padding:8px 12px; text-decoration:none; border-radius:5px; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f3f4;
+}
+
+/* Top bar */
+.header {
+  background: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+  margin: 0;
+  color: #1a73e8;
+}
+
+.search {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #eef3fc;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Section title */
+.section {
+  margin-bottom: 25px;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Card */
+.card {
+  background: white;
+  width: 180px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon */
+.icon {
+  font-size: 40px;
+}
+
+/* Button */
+.btn {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 8px;
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background: #1558c0;
+}
 </style>
 </head>
 
 <body>
 
-<h2>📁 My Cloud Storage</h2>
+<!-- Header -->
+<div class="header">
+  <h2>☁ My Cloud</h2>
+  <div class="search">
+    <input type="text" placeholder="Search files...">
+  </div>
+</div>
 
-<div class="file">
-🎬 Movie File<br><br>
-<a class="btn" href="https://t.me/c/3708009442/2">Download</a>
+<!-- Content -->
+<div class="container">
+
+  <!-- Movies -->
+  <div class="section">
+    <h3>🎬 Movies</h3>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🎬</div>
+        Movie Name.mp4
+        <a class="btn" href="https://t.me/c/3708009442/2">Download</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Music -->
+  <div class="section">
+    <h3>🎵 Music</h3>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🎵</div>
+        Song.mp3
+        <a class="btn" href="https://t.me/c/3708009442/2">Download</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Documents -->
+  <div class="section">
+    <h3>📄 Documents</h3>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📄</div>
+        File.pdf
+        <a class="btn" href="https://t.me/c/3708009442/2">Download</a>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 </body>
